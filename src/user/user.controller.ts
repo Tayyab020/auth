@@ -40,11 +40,11 @@ export class UserController {
 
     response.cookie('auth_token', token, {
       httpOnly: true,
-      secure: process.env.NODE_ENV === 'production', // Enable secure cookies in production
+      secure: process.env.NODE_ENV === 'production',
       sameSite: 'strict',
     });
 
-    // Return the user object with token
+
     return {
       user: {
         id: user._id,
